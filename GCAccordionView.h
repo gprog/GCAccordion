@@ -53,7 +53,7 @@
  */
 //Modifying the Header and Footer of Sections
 - (CGFloat) accordionView:(GCAccordionView *)accordionView heightForHeaderInSection:(NSInteger)section;
-- (GCAccordionHeaderView *) accordionView:(GCAccordionView *)accordionView viewForHeaderInSection:(NSInteger)section;
+- (UIView *) accordionView:(GCAccordionView *)accordionView viewForHeaderInSection:(NSInteger)section;
 /*– tableView:viewForHeaderInSection:
 – tableView:viewForFooterInSection:
 
@@ -118,5 +118,5 @@
 @property (nonatomic) BOOL multipleExpandable;
 
 - (UITableViewCell *) cellWithIdentifier: (NSString *) identifier;
-
+- (GCAccordionHeaderView *) defaultHeaderForSection: (NSInteger) section;
 @end

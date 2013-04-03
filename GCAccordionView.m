@@ -196,19 +196,26 @@
     if (self.accordionDelegate && [self.accordionDelegate respondsToSelector:@selector(accordionView:heightForHeaderInSection:)]) return [self.accordionDelegate accordionView:self heightForHeaderInSection:section]; else return 50;
 }
 
-- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+- (GCAccordionHeaderView *) defaultHeaderForSection:(NSInteger)section
 {
-    GCAccordionHeaderView *headerView;
-    if (self.accordionDelegate && [self.accordionDelegate respondsToSelector:@selector(accordionView:viewForHeaderInSection:)])
-    {
-        headerView = [self.accordionDelegate accordionView:self viewForHeaderInSection:section];
-    } else {
-        NSString *title = ([self.accordionDataSource respondsToSelector:@selector(accordionView:titleForHeaderInSection:)]) ? [self.accordionDataSource accordionView:self titleForHeaderInSection:section] : [self tableView:tableView titleForHeaderInSection:section];
-        headerView = [[GCAccordionHeaderView alloc] initWithFrame:CGRectMake(0, 0, tableView.bounds.size.width, 50) title:title section:section delegate:self];
-    }
+    NSString *title = ([self.accordionDataSource respondsToSelector:@selector(accordionView:titleForHeaderInSection:)]) ? [self.accordionDataSource accordionView:self titleForHeaderInSection:section] : [self tableView:self titleForHeaderInSection:section];
+    GCAccordionHeaderView *headerView = [[GCAccordionHeaderView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, 50) title:title section:section delegate:self];
     headerView.disclosureIndicator = [UIImage imageNamed:@"arrow.png"];
     headerView.opened = [self isExpandedSection:section];
     return headerView;
+}
+
+- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    if (self.accordionDelegate && [self.accordionDelegate respondsToSelector:@selector(accordionView:viewForHeaderInSection:)])
+    {
+        UIView *headerView = [self.accordionDelegate accordionView:self viewForHeaderInSection:section];
+        if (headerView) return headerView;
+    }
+        
+
+    
+    return [self defaultHeaderForSection:section];
 }
 
 #pragma  mark - Expand Collapse Logic
