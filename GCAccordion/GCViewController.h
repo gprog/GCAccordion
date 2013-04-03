@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GCAccordionView.h"
 
-@interface GCViewController : UIViewController
+@interface GCViewController : UIViewController<GCAccordionViewDataSource>
 
 @end

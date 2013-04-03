@@ -18,6 +18,9 @@
 		5DFD851A170ABC6D00F2C21C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DFD8519170ABC6D00F2C21C /* Default-568h@2x.png */; };
 		5DFD851D170ABC6D00F2C21C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DFD851B170ABC6D00F2C21C /* MainStoryboard.storyboard */; };
 		5DFD8520170ABC6D00F2C21C /* GCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD851F170ABC6D00F2C21C /* GCViewController.m */; };
+		5DFD852B170AC9A400F2C21C /* GCAccordionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFD852A170AC9A400F2C21C /* GCAccordionView.m */; };
+		5DFD852E170B23F100F2C21C /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DFD852C170B23F100F2C21C /* arrow.png */; };
+		5DFD852F170B23F100F2C21C /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5DFD852D170B23F100F2C21C /* arrow@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,10 @@
 		5DFD851C170ABC6D00F2C21C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		5DFD851E170ABC6D00F2C21C /* GCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCViewController.h; sourceTree = "<group>"; };
 		5DFD851F170ABC6D00F2C21C /* GCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCViewController.m; sourceTree = "<group>"; };
+		5DFD8529170AC9A400F2C21C /* GCAccordionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCAccordionView.h; sourceTree = "<group>"; };
+		5DFD852A170AC9A400F2C21C /* GCAccordionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCAccordionView.m; sourceTree = "<group>"; };
+		5DFD852C170B23F100F2C21C /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		5DFD852D170B23F100F2C21C /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,10 @@
 		5DFD84F7170ABC6D00F2C21C = {
 			isa = PBXGroup;
 			children = (
+				5DFD852C170B23F100F2C21C /* arrow.png */,
+				5DFD852D170B23F100F2C21C /* arrow@2x.png */,
+				5DFD8529170AC9A400F2C21C /* GCAccordionView.h */,
+				5DFD852A170AC9A400F2C21C /* GCAccordionView.m */,
 				5DFD8509170ABC6D00F2C21C /* GCAccordion */,
 				5DFD8502170ABC6D00F2C21C /* Frameworks */,
 				5DFD8501170ABC6D00F2C21C /* Products */,
@@ -164,6 +175,8 @@
 				5DFD8518170ABC6D00F2C21C /* Default@2x.png in Resources */,
 				5DFD851A170ABC6D00F2C21C /* Default-568h@2x.png in Resources */,
 				5DFD851D170ABC6D00F2C21C /* MainStoryboard.storyboard in Resources */,
+				5DFD852E170B23F100F2C21C /* arrow.png in Resources */,
+				5DFD852F170B23F100F2C21C /* arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +190,7 @@
 				5DFD8510170ABC6D00F2C21C /* main.m in Sources */,
 				5DFD8514170ABC6D00F2C21C /* GCAppDelegate.m in Sources */,
 				5DFD8520170ABC6D00F2C21C /* GCViewController.m in Sources */,
+				5DFD852B170AC9A400F2C21C /* GCAccordionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
